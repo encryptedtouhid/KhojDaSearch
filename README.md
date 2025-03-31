@@ -2,6 +2,10 @@
 
 A cross-platform desktop search application inspired by macOS Spotlight that allows you to quickly find files on your system with a simple keyboard shortcut.
 
+## Screenshot
+![img.png](img.png)
+
+
 ## Features
 
 - **Global Search**: Press Alt+Space to instantly search your files from anywhere
