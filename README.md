@@ -1,42 +1,72 @@
-# Khoj Da Search
+# Khoj Da Search 2.0
 
-A cross-platform desktop search application inspired by macOS Spotlight that allows you to quickly find files on your system with a simple keyboard shortcut.
+A modern, efficient cross-platform desktop search application inspired by macOS Spotlight. Completely rewritten with PyQt6, advanced indexing, and beautiful UI.
 
 ## Screenshot
 ![img.png](img.png)
 
+## ✨ New Features (v2.0)
 
-## Features
+### 🚀 Performance & Efficiency
+- **Modern PyQt5/6**: Latest Qt framework for better performance and appearance
+- **Full-Text Search**: Lightning-fast search using SQLite FTS5
+- **Background Indexing**: Non-blocking indexing that doesn't freeze the UI
+- **Incremental Indexing**: Only re-index changed files, not everything
+- **Smart File Monitoring**: Real-time updates when files change
+- **Optimized Database**: WAL mode, proper indexing, and connection pooling
+- **Batch Processing**: Efficient bulk operations for large file systems
 
-- **Global Search**: Press Alt+Space to instantly search your files from anywhere
-- **Cross-Platform**: Works on Windows, macOS, and Linux
-- **Spotlight-like Interface**: Clean, minimal UI that appears in the center of your screen
-- **Adaptive Results**: Shows relevant files as you type
-- **Persistent Indexing**: Maintains a database of your files for fast searching
-- **Auto-hiding**: Disappears when you click outside or switch to another application
+### 🎨 Modern UI/UX
+- **Beautiful Interface**: Smooth animations and modern styling  
+- **Dark/Light Themes**: Automatic theme detection and customization
+- **Smooth Animations**: Polished resize and fade transitions
+- **Better Typography**: Improved fonts and spacing
+- **Enhanced Results**: File type icons, better formatting, relevance ranking
+- **Context Menus**: Right-click for Open, Reveal, Copy Path options
+
+### ⚙️ Advanced Features
+- **Configuration System**: JSON-based settings with sensible defaults
+- **System Tray Integration**: Menu bar status icon showing indexing progress
+- **Background Processing**: Indexing runs in background without blocking UI
+- **Progress Monitoring**: Optional progress dialog that can be shown/hidden
+- **Logging**: Proper logging for debugging and monitoring
+- **Error Handling**: Robust error handling and recovery
+- **Type Safety**: Modern Python with type hints throughout
+- **Modular Design**: Clean separation of concerns and extensibility
+- **Smart Exclusions**: Configurable path exclusions (node_modules, .git, etc.)
 
 ## Installation
 
 ### Requirements
-- Python 3.6 or higher (tested with Python 3.10)
-- PyQt5
-- pynput
+- **Python 3.8 or higher** (recommended: Python 3.10+)
+- Modern operating system (Windows 10+, macOS 10.15+, Ubuntu 20.04+)
 
 ### Install Dependencies
 ```bash
-pip install PyQt5 pynput
+pip install -r requirements.txt
 ```
 
-### Download and Run
-1. Save the `khoj_da_search.py` file to your preferred location
-2. Run it:
+### Quick Start
 ```bash
-python khoj_da_search.py
+# Test the components first
+python test_app.py
+
+# Run the main application
+python khoj_search.py
 ```
 
 ## Usage
 
-1. **First Launch**: On first run, the application will index your files (this may take a few minutes)
+### Background Indexing
+The application now features **smart background indexing**:
+- **Non-blocking**: UI remains responsive during indexing
+- **System Tray Status**: Check progress via menu bar icon tooltip
+- **Optional Progress Dialog**: Right-click tray → "Show Progress" to see detailed progress
+- **Immediate Search**: Start searching even while indexing is running
+- **Auto-detection**: Only indexes if database is empty or outdated
+
+### Basic Usage
+1. **First Launch**: Indexing starts automatically in background
 2. **Open Search**: Press Alt+Space to open the search bar
 3. **Search Files**: Start typing to see matching results
 4. **Navigate Results**: Use up/down arrow keys to navigate through results

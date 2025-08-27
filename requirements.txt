@@ -1,1 +1,4 @@
-pynput~=1.8.0
+PyQt5>=5.15.0
+pynput>=1.7.6
+watchdog>=3.0.0
+appdirs>=1.4.4
